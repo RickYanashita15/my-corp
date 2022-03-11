@@ -1,0 +1,67 @@
+.button {
+    background-color: white;
+    border: white;
+    color: black;
+    padding: 15px 50px;
+    margin-left: 45%;
+    margin-top: 20%;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+    display: grid;
+    font-size: 24px;
+    border-radius: 0px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: #13A88C;
+  color: white;
+  border-width: 15px;
+  box-shadow: 0 40px 80px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  /* Changes color of button when mouse is hovered over */
+}
+/* CSS of Images in the website */
+.image{
+  margin: 10px;
+}
+
+/* Attempt at adding a popup text triggered by a hover */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+.tooltip .tooltiptext {
+  visibility: hidden; 
+  /* Triggers the visibility of the tooltiptext, currently hidden unless hovered over */
+  width: 120px;
+  background-color: whitesmoke;
+  color: #2065EB;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! <-- Copied from W3 Schools*/
+  position: absolute;
+  z-index: 1;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* End of Attempt at adding popup text triggered by a hover */
+
+/* Code to maintain responsive website */
+@media screen and (max-width: 700px) { /* When the screen size changes to <= 700px, change the parameters in this at-rule of .banner */
+    .banner{
+      background-color: #0B5E48;
+    }
+  }
+
+  @media screen and (max-width: 700px) { /* When the screen size changes to <= 700px, change the parameters in this at-rule of .content */
+    .content{
+      background-color: #1BDEAA;
+    }
+  }
+/* document that has 2 divs. when I reduce the size of the window, change the color of the elements on the page */
