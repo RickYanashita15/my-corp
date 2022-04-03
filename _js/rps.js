@@ -15,14 +15,26 @@ Finger
 // let user = prompt("choose: rock, paper, or scissors...");
 let user;
 let choices = ["rock", "paper", "scissors"];
+let winCount = 0;
+let lossCount = 0;
+let tieCount = 0; 
+let winPercent; 
+// will be calculated when the function is running
+let totalCount = 0; 
+// declared extra variables for the Counts of each win,loss,tie to create a scoreboard/tracker
+
+
 
 function userChoice(choice) {
     user = choice;
+    // whatever the user chooses, that will become var user. Will be run through compare() function
     compare();
 }
 
 function randNum(things){
     return Math.floor(Math.random() * things.length);
+    // spits out a random number from within the bounds of the method
+    // the method uses things.length to adapt to any length of rock, paper, scissors. gun, pool noodle, etc. 
 }
 
 function cpuChoice(){
@@ -31,6 +43,7 @@ function cpuChoice(){
 }
 
 function drawImg(pic, width, height, alt, id){
+    // this function just draws the images of rock,paper,scissors
     var x = document.createElement("IMG");
     x.setAttribute("src", pic);
     x.setAttribute("width", width);
@@ -45,6 +58,7 @@ function removeChild(id){
     let identity = document.getElementById(id);
     while (identity.firstChild) {
         identity.removeChild(identity.firstChild);
+//purpose of the function is to remove the old image of the computer/player's choices to declutter the game screen
     }
 }
 
@@ -58,6 +72,7 @@ function compare(){
     removeChild('player');
     removeChild('cpu'); 
 
+    //for each scenario, the compare() function draws the corresponding image
     if (user == "rock"){
         drawImg("_images/rock.jpg", "100", "100", "rock", "player");
     }
@@ -76,18 +91,34 @@ function compare(){
     if (cpu == "scissors"){
         drawImg("_images/scissors.png", "100", "100", "scissors", "cpu");
     }
+
+    //the computer operates through these if statements to find which result occured
     if (user == "rock" && cpu == "scissors" ||
     user == "paper" && cpu == "rock" ||
     user == "scissors" && cpu == "paper") {
     console.log("user wins the game...");
+    //add +1 for every win the user gets, add to the winCount
+    winCount++; 
+    document.getElementById("winCount").innerHTML = winCount;
+    //above line of code picked up from StackOverflow
     }
     else if (cpu == "rock" && user == "scissors" ||
     cpu == "paper" && user == "rock" ||
     cpu == "scissors" && user == "paper") {
     console.log("user loses the game...");
+    lossCount++; 
+    document.getElementById("lossCount").innerHTML = lossCount;
+
     }
     else if (cpu == user){
     console.log("tie game...");
+    tieCount++; 
+    document.getElementById("tieCount").innerHTML = tieCount;
+
+    totalCount++; 
+    winPercent = winCount/totalCount; 
+    document.getElementById("winPercent").innerHTML = winPercent;
+
     }
     else {
     console.log("something went wrong");

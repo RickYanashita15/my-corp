@@ -1,0 +1,41 @@
+/* <!-- the code regarding the two evenly placed squares representing tiles were influenced by the code on this website --> */
+/* <!-- https://www.digitalocean.com/community/tutorials/how-to-build-a-tiled-layout-with-css-section-3 --> */
+
+.heading {
+    text-align:center;
+    color: white;
+    background-color: green;
+    padding: 15px;
+    padding-top: 0px;
+    font-size: 24px;
+    text-decoration: none;
+  
+  }
+/* below code is all influenced by the code from digitalocean.com */
+.box {
+    float: left;
+    width: 50%;
+    height: 100%;
+    /* setting the dimensions to percentages allows the page to adapt to the screen size */
+}
+.project-1 {
+    background: url('../images/project-left.jpeg');
+    /* background-size: cover; */
+    background-color: #5bdfc7;
+  }
+.project-1:hover {
+    background-color:#FEDE00;
+    /* color of the box will change when the mouse hovers over */
+  }
+.project-2 {
+    background-color:#18d9b5;
+  }
+.project-2:hover {
+    background-color: #FEDE00;
+ }
+
+  .project-text {
+    text-align:center;
+    padding: 35%;
+    font-size:50px;
+  }

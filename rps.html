@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors Program</title>
+    <script src="_js/rps.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="_css\rps.css">
+    <link rel="stylesheet" href="stylePage.css">
+    <!-- link all the css and javascript files to the main html -->
+    <link rel="stylesheet" href="explorePageStyle.css">
+  </head>
+  <body onload="compare()">
+    <!-- onload compare() in the body to allow the body to begin counting the wins/loss/ties as soon as the program begins -->
+    <div class="banner one-edge-shadow"> 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <a onclick="window.location.href='index.html'" class="navbar-brand" href="#"> <img src="_images/fakeCompanyLogo1.svg" alt="" width="42" height = "36"></a>
+    </div>
+    <div class="divider"> </div>
+    <div class="content"> 
+      <!-- all important elements inside the content -->
+      <div class="h1"> Rock Paper Scissors </div>
+
+      <div class="row">
+        <div class="column">
+          <button type="button" class="rpsclick" onclick="userChoice('rock');">Choose Rock</button>
+          <!-- a button, of class rpsclick, calls userChoice, which is a function in the rps.js file -->
+          <button type="button" class="rpsclick" onclick="userChoice('paper');">Choose Paper</button>
+          <button type="button" class="rpsclick" onclick="userChoice('scissors');">Choose Scissors</button>
+          <p> Player </p>
+          <div id="player"> </div>
+          <p> Computer </p>
+          <div id="cpu"></div>
+        </div>
+        <div class="column">
+          <p> # of losses: <span id="lossCount"></span></p>
+          <p> # of wins: <span id="winCount"></span></p>
+          <p> # of ties: <span id="tieCount"></span></p>
+          <p> win percentage: <span id="winPercent"> % </span></p>
+          <!-- this code from likes 36-39 are all for the scoreboard, which the scores keep in real time because of the refresh of the onload -->
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- TODO
+
+  - CSS Styling
+  - Score Keeping
+  - Title 
+
+-->
