@@ -34,7 +34,7 @@ h1{
   .content{
       width: 100%;
       height: 1000px;
-      background-color: #B1D2E6;
+      background-color: white;
       padding: 10px;
   }
   /* CSS of Buttons */
@@ -55,4 +55,12 @@ h1{
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
       /* Creates shadow/lift effect for the button */
       transition-duration: 0.4s;
+  }
+  .columnStyle{
+    background-color: blue;
+    width: 50%;
+  }
+  .column{
+    width: 50%;
+    color: white;
   }

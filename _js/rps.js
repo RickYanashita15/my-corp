@@ -99,8 +99,11 @@ function compare(){
     console.log("user wins the game...");
     //add +1 for every win the user gets, add to the winCount
     winCount++; 
+    // winCount is the name of the id, called in the rps.html file.
+    // when winCount is called, the winCount variable is called using span function taken from StackOverflow
     document.getElementById("winCount").innerHTML = winCount;
     //above line of code picked up from StackOverflow
+    //
     }
     else if (cpu == "rock" && user == "scissors" ||
     cpu == "paper" && user == "rock" ||
@@ -117,6 +120,7 @@ function compare(){
 
     totalCount++; 
     winPercent = winCount/totalCount; 
+    // calculate winPercent by dividing win count by the total number of turns of rps taken
     document.getElementById("winPercent").innerHTML = winPercent;
 
     }
